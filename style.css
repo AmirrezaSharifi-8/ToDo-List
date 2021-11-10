@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&family=Zen+Kurenaido&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Zen Kurenaido", sans-serif;
+  font-size: 1.6rem;
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(44, 44, 44);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.btn {
+  border-radius: 2rem;
+  border: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+  transition: all 0.2s;
+  font-weight: inherit;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.4);
+}
+
+.btn:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.4);
+}
+
+#bg {
+  width: 100%;
+  height: 40vh;
+  background-color: orange;
+  background-size: cover;
+  background-position: center;
+}
+
+#content {
+  width: 100vw;
+  height: 100vh;
+  flex-direction: row;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#section-main,
+#section-add,
+#section-history {
+  width: 100vw;
+  height: 100%;
+  justify-content: space-around;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+#section-add {
+  transform: translateX(-100vw);
+}
+
+#section-history {
+  transform: translateX(100vw);
+}
+
+#section-main__box,
+#section-add__box,
+#section-history__box {
+  height: 70vh;
+  justify-content: space-between;
+  border-radius: 2rem;
+  box-shadow: 0 0 4rem rgba(0, 0, 0, 0.3);
+  background-color: #eee;
+  padding: 5rem;
+}
+
+#section-history__box {
+  width: 90%;
+  height: 90vh;
+  justify-content: space-between;
+}
+
+.btn-front {
+  width: 30rem;
+  background-color: #333;
+  color: #eee;
+  font-size: 1.8rem;
+  padding: 2rem 4rem;
+}
+
+#btnAdd {
+  margin-bottom: 2rem;
+  background-color: orange;
+}
+
+#back-box {
+  position: fixed;
+  top: 3rem;
+  left: 5rem;
+  z-index: 10;
+}
+
+#btnBack {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#adding-form {
+  flex: 0 0 40%;
+  justify-content: space-around;
+}
+
+.input {
+  width: 40rem;
+  border: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  border-radius: 2rem;
+  padding: 2rem 5rem;
+  margin: 1rem;
+}
+
+.input:nth-child(3) {
+  margin-bottom: 3rem;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.btn-submit {
+  width: 15rem;
+}
+
+.heading-box {
+  flex: 0 0 15%;
+}
+
+#subject-list {
+  width: 100%;
+  flex: 0 0 85%;
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  overflow-y: scroll;
+}
+
+#subject-item {
+  min-height: 20rem;
+  border-radius: 2rem;
+  border: 2px solid rgb(135, 135, 255);
+  justify-content: space-evenly;
+}
+
+.history-url {
+  padding: 1rem 3rem;
+  background-color: rgb(49, 49, 49);
+  color: #eee;
+}

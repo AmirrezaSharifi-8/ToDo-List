@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo Container</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="bg"></div>
+    <main id="content" class="center">
+      <div id="back-box">
+        <button id="btnBack" class="btn hidden">&#8592;</button>
+      </div>
+
+      <div id="section-main" class="center">
+        <div id="section-main__box" class="center">
+          <div class="heading-box">
+            <h1 class="header">ToDo Container</h1>
+          </div>
+
+          <div class="btn-box">
+            <div id="add-box">
+              <button id="btnAdd" class="btn btn-front">Add Item</button>
+            </div>
+
+            <div id="history-box">
+              <button id="btnHistory" class="btn btn-front">Saved Items</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="section-add" class="center">
+        <div id="section-add__box" class="center">
+          <div class="heading-box">
+            <h1 class="header">Add New Item</h1>
+          </div>
+          <form
+            id="adding-form"
+            class="center"
+            action="http://192.168.1.188:3000/write/"
+          >
+            <input
+              class="input"
+              type="text"
+              placeholder="Title"
+              name="title"
+              required
+            />
+            <input class="input" type="text" placeholder="Url" name="url" />
+            <select class="input" name="type">
+              <option value="todo">To Do</option>
+              <option value="tolearn">To Learn</option>
+              <option value="tocheck">To Check</option>
+              <option value="toinvent">To Invent</option>
+            </select>
+            <button class="btn btn-front btn-submit" type="submit">Add</button>
+          </form>
+        </div>
+      </div>
+
+      <div id="section-history" class="center">
+        <div id="section-history__box" class="center">
+          <div class="heading-box">
+            <h1 class="header">Saved Items</h1>
+          </div>
+
+          <ul id="subject-list"></ul>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
